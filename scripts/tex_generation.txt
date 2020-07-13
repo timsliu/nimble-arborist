@@ -1,0 +1,26 @@
+This document describes how .tex files for each tree are
+automatically generated and what guarantees about file
+generation are maintainted.
+
+
+1. Initialization
+-check if a pickle file has been created
+-if not, create a pickle file w/ metadata for the dir
+-create a .gitignore
+-run generation
+-create archive folder
+
+2. Updating tex file
+
+2. Compilation
+-check if the tree_tex object is out of date
+-if so, copy the current tex to the archive w/ a changed name
+-run compile
+-update the compile time in the object
+
+3. Updating
+-Any old .tex file is a saved to the .archive folder
+
+A set of flags are used in the tex files for compilation.
+These flags indicate whether certain fields can be
+overwritten
