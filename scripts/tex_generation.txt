@@ -2,15 +2,43 @@ This document describes how .tex files for each tree are
 automatically generated and what guarantees about file
 generation are maintainted.
 
+Guarantees and assumptions
+1. The scripts are additive; they will not remove content that the user
+   has manually entered
+2. The scripts assume that the automatically generated contents are not
+   deleted; the state of the tex file is stored in a pickle file, and the
+   script assumes the pickle file is accurate
+
 
 1. Initialization
 -check if a pickle file has been created
 -if not, create a pickle file w/ metadata for the dir
 -create a .gitignore
--run generation
+-call update_tex
 -create archive folder
+-runs the update method
 
 2. Updating tex file
+
+All
+----
+-read in the tex file 
+-copy the old tex file to the archive folder
+
+Images
+------
+-Get list of all images in the directory
+-Compare to list of images in the tree_class object
+-Add any that images that are not in the file
+
+Encyclopedia link
+----------
+-check if the has_url field is False
+-if so, open the .xlsx of all encyclopedia URLs
+-check if there is a URL; if so update it
+
+Locations
+-compare the list of locations in the .xlsx with the location list
 
 2. Compilation
 -check if the tree_tex object is out of date
