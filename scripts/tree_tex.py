@@ -29,7 +29,9 @@ class tree_tex():
 
         # update link
 
-        # update locations 
+        # update locations
+
+        # check that name still matches
 
 
     def write_tex(self):

@@ -37,6 +37,11 @@ Encyclopedia link
 -if so, open the .xlsx of all encyclopedia URLs
 -check if there is a URL; if so update it
 
+Name
+--------
+-check if the name of the directory matches what's in the title
+-if it doesn't, replace the name
+
 Locations
 -compare the list of locations in the .xlsx with the location list
 
