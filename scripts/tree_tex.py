@@ -16,6 +16,8 @@ class tree_tex():
         '''read the template tex file'''
 
     def read_tex(self):
+        '''read a tex file and get the contents as a string''' 
+
         # TODO read the tex file and get the contents
         # as a list of strings
 
@@ -52,9 +54,10 @@ class tree_tex():
         self.mark_compiled()
 
     def mark_compiled(self):
+        '''update the last compile time'''
         # updates the last compiled time
 
     def out_of_date(self):
-        # returns if last_edit time > last_compiled time
-        # indicating the file is out of date
+        '''returns if last_edit time > last_compiled time indicating
+        the file is out of date'''
 
